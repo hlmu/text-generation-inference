@@ -102,7 +102,7 @@ WORKDIR /usr/src
 COPY server/Makefile-transformers Makefile
 
 # Build specific version of transformers
-RUN BUILD_EXTENSIONS="True" make build-transformers
+RUN BUILD_EXTENSIONS="False" make build-transformers
 
 # Text Generation Inference base image
 FROM debian:bullseye-slim as base
